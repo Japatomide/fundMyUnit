@@ -1,0 +1,204 @@
+/* Basic Reset and Body Styles (Optional but Recommended) */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header and Navbar Styles */
+  header {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .nav-links li a:hover {
+    color: #28a745;
+  }
+  
+  .hamburger-menu {
+    display: none; /* Initially hide the hamburger menu */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transition: 0.3s;
+  }
+  
+  /* Hero Section Styles (No changes needed for this functionality) */
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    background-color: #1e7e34;
+  }
+  
+  .hero-image {
+    flex: 1;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
+
+  /* Future Invest Section */
+  .future-invest {
+    display: flex;
+    padding: 60px 20px;
+    max-width: 1200px; /* Example container width */
+    margin: 0 auto;
+    align-items: center; /* Vertically center content */
+  }
+  
+  .future-invest-content {
+    flex: 1; /* Take up available space */
+    padding-right: 40px; /* Spacing between text and image */
+  }
+  
+  .future-invest h2 {
+    font-size: 2em;
+    color: #333; /* Example heading color */
+    margin-bottom: 20px;
+  }
+  
+  .future-invest p {
+    color: #555; /* Example paragraph color */
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .future-invest-buttons {
+    display: flex;
+  }
+  
+  .learn-more-button, .get-started-button {
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px; /* Spacing between buttons */
+  }
+  
+  .learn-more-button {
+    background-color: #f0f0f0; /* Example background color */
+    color: #333; /* Example text color */
+    border: 1px solid #ccc; /* Example border */
+    cursor: pointer;
+  }
+
+  .learn-more-button:hover {
+    background-color: #28a745;
+  }
+  
+  .get-started-button {
+    background-color: #28a745; /* Example background color */
+    color: white; /* Example text color */
+  }
+  
+  .future-invest-image {
+    flex: 1;
+  }
+  
+  .future-invest-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
+  }
+  
+  /* Responsive Design (Basic Example) */
+  @media (max-width: 768px) {
+    .future-invest {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .future-invest-content {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  
+    .future-invest-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .learn-more-button, .get-started-button {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
