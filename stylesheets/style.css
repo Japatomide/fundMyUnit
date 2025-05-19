@@ -46,6 +46,7 @@ body {
   .nav-links li a:hover {
     color: #28a745;
   }
+
   
   .hamburger-menu {
     display: none; /* Initially hide the hamburger menu */
@@ -97,6 +98,9 @@ body {
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
   }
   
   .cta-button:hover {
@@ -111,6 +115,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   
@@ -155,10 +160,12 @@ body {
   }
   
   .learn-more-button {
-    background-color: #f0f0f0; /* Example background color */
-    color: #333; /* Example text color */
-    border: 1px solid #ccc; /* Example border */
+    background-color: #f0f0f0; 
+    color: #333; 
+    /* border: 1px solid #ccc;  */
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
   }
 
   .learn-more-button:hover {
@@ -166,8 +173,36 @@ body {
   }
   
   .get-started-button {
-    background-color: #28a745; /* Example background color */
-    color: white; /* Example text color */
+    background-color: #28a745; 
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    cursor: pointer;
+  }
+
+  .future-invest-testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    /* margin-right: 12rem; */
+  }
+
+  .future-invest-testimonials .future-invest-paragraph {
+    font-weight: bolder;
+    font-size: 1rem;
+    padding-top: 1.01rem;
+    line-height: 1.4rem;
+    padding-left: 0.9rem;
+  }
+
+
+  .future-invest-testimonials .img-ph {
+    background-color: #28a745;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   .future-invest-image {
@@ -178,6 +213,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   /* Responsive Design (Basic Example) */
