@@ -50,11 +50,11 @@ body {
   .login {
     background-color: #28a745;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 70px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
@@ -62,9 +62,8 @@ body {
 
   .login:hover {
     background-color: #1e7e34;
-    color: white;
   }
-  
+
   .hamburger-menu {
     display: none; /* Initially hide the hamburger menu */
     flex-direction: column;
@@ -109,7 +108,6 @@ body {
   
   .cta-button {
     background-color: #28a745;
-    color: white;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -118,6 +116,11 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
+  }
+
+  .cta-button a {
+    color: white;
+    text-decoration: none;
   }
   
   .cta-button:hover {
@@ -205,13 +208,13 @@ body {
     /* margin-right: 12rem; */
   }
 
-  .future-invest-testimonials .future-invest-paragraph {
+  /* .future-invest-testimonials .future-invest-paragraph {
     font-weight: bolder;
     font-size: 1rem;
     padding-top: 1.01rem;
     line-height: 1.4rem;
     padding-left: 0.9rem;
-  }
+  } */
 
 
   .future-invest-testimonials .img-ph {
@@ -233,25 +236,3 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
-  /* Responsive Design (Basic Example) */
-  @media (max-width: 768px) {
-    .future-invest {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .future-invest-content {
-      padding-right: 0;
-      margin-bottom: 30px;
-    }
-  
-    .future-invest-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .learn-more-button, .get-started-button {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
