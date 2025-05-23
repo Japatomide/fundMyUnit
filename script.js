@@ -1,4 +1,4 @@
-// Hamburger Menu 
+// Hamburger Menu
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navLinks = document.querySelector(".nav-links");
 
@@ -29,3 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Dynamic Footer Date
+const now = new Date();
+const options = { year: "numeric" };
+document.getElementById("current_year").textContent = now.toLocaleDateString(
+  "en-US",
+  options
+);
