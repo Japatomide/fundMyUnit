@@ -99,13 +99,53 @@
   }
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments(FAQ Section) */
 @media (max-width: 768px) {
   .faq-section h2 {
       font-size: 1.8em;
   }
 
   .faq-question h3 {
+      font-size: 1em;
+  }
+}
+
+/* Responsive adjustments(Footer Section) */
+@media (max-width: 768px) {
+  .footer-grid {
+      grid-template-columns: 1fr; /* Stack columns on small screens */
+      text-align: center; /* Center align text for stacked columns */
+  }
+
+  .footer-column h4 {
+      margin-top: 30px;
+  }
+
+  .footer-bottom {
+      flex-direction: column; /* Stack bottom content on small screens */
+      text-align: center;
+  }
+
+  .company-info,
+  .social-icons {
+      margin-bottom: 15px; /* Add space between stacked items */
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+      padding: 40px 15px 20px;
+  }
+
+  .footer-column h4 {
+      font-size: 1em;
+  }
+
+  .footer-column ul li a {
+      font-size: 0.9em;
+  }
+
+  .social-icons {
       font-size: 1em;
   }
 }
