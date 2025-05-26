@@ -1,11 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0616aa2851.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/rwd.css">
+    <link rel="stylesheet" href="subscribe.css">
+    <link rel="stylesheet" href="subscribe_rwd.css" />
     <title>Subscriptions</title>
-</head>
-<body>
-    <h1>Subscriptions page</h1>
-</body>
+  </head>
+  <body>
+    <!-- Navbar & Hero Section -->
+    <header>
+      <nav>
+        <div class="logo">FundMyUnit</div>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about/about.html">About</a></li>
+          <li><a href="/pages/properties/properties.html">Properties</a></li>
+          <li><a href="/pages/subscribe/subscribe.html">Subscribe</a></li>
+          <!-- <li><a href="#">Testimonials</a></li> -->
+          <li><a id="login" href="/pages/auth/auth.html">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Section -->
+    <main>
+      <section class="hero-section">
+          <div class="container">
+              <h1>Choose Your Investment Plan</h1>
+              <p>Gain access to premium features, early investment opportunities, and personalized insights to maximize your returns. Select the plan that best fits your investment goals.</p>
+          </div>
+      </section>
+
+      <section class="plans-grid container">
+          <div class="plan-card">
+              <div class="plan-header">
+                  <h3 class="plan-name">Basic Plan</h3>
+                  <div class="price">₦5,000<span>/month</span></div>
+              </div>
+              <ul class="features-list">
+                  <li>Access to all basic listings</li>
+                  <li>Standard email support</li>
+                  <li>Monthly market insights</li>
+                  <li>Community forum access</li>
+              </ul>
+              <a href="#" class="btn-primary">Choose Plan</a>
+          </div>
+
+          <div class="plan-card featured">
+              <div class="plan-header">
+                  <h3 class="plan-name">Premium Plan</h3>
+                  <div class="price">₦15,000<span>/month</span></div>
+              </div>
+              <ul class="features-list">
+                  <li>All Basic Plan features</li>
+                  <li>Early access to new properties (24 hrs)</li>
+                  <li>Priority email support</li>
+                  <li>Quarterly exclusive webinars</li>
+                  <li>Detailed market reports</li>
+              </ul>
+              <a href="#" class="btn-primary">Choose Plan</a>
+          </div>
+
+          <div class="plan-card">
+              <div class="plan-header">
+                  <h3 class="plan-name">Pro Plan</h3>
+                  <div class="price">₦30,000<span>/month</span></div>
+              </div>
+              <ul class="features-list">
+                  <li>All Premium Plan features</li>
+                  <li>Personalized financial advisor (1hr/month)</li>
+                  <li>Dedicated phone support</li>
+                  <li>Exclusive investment opportunities</li>
+                  <li>Annual portfolio review</li>
+              </ul>
+              <a href="#" class="btn-primary">Choose Plan</a>
+          </div>
+      </section>
+
+      <section class="comparison-section">
+          <div class="container">
+              <h2>Compare All Features</h2>
+              <div class="comparison-table-wrapper">
+                  <table class="comparison-table">
+                      <thead>
+                          <tr>
+                              <th>Features</th>
+                              <th>Basic</th>
+                              <th>Premium</th>
+                              <th>Pro</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="feature-name">Access to all listings</td>
+                              <td><span class="check-icon">✔</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                          <tr>
+                              <td class="feature-name">Early property access</td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                          <tr>
+                              <td class="feature-name">Priority support</td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                          <tr>
+                              <td class="feature-name">Exclusive webinars</td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                          <tr>
+                              <td class="feature-name">Detailed market reports</td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                          <tr>
+                              <td class="feature-name">Personal financial advisor</td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                          <tr>
+                              <td class="feature-name">Annual portfolio review</td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="cross-icon">✖</span></td>
+                              <td><span class="check-icon">✔</span></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </section>
+
+      <section class="faq-section">
+          <div class="container">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-list">
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          Can I change my plan later? <span class="faq-toggle-icon"></span>
+                      </div>
+                      <div class="faq-answer">
+                          Yes, you can upgrade or downgrade your plan at any time through your account settings. Changes will take effect at the start of your next billing cycle.
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          What payment methods do you accept? <span class="faq-toggle-icon"></span>
+                      </div>
+                      <div class="faq-answer">
+                          We accept major credit/debit cards (Visa, MasterCard) and secure online payment gateways. More details will be provided during the checkout process.
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          Is there a free trial? <span class="faq-toggle-icon"></span>
+                      </div>
+                      <div class="faq-answer">
+                          Currently, we do not offer a free trial, but our Basic Plan allows you to get started at a minimal cost and upgrade as your needs grow.
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          How do I cancel my subscription? <span class="faq-toggle-icon"></span>
+                      </div>
+                      <div class="faq-answer">
+                          You can cancel your subscription at any time from your account dashboard. Your plan will remain active until the end of your current billing period.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="contact-section">
+          <div class="container">
+              <h2>Still Have Questions?</h2>
+              <p>Our team is here to help! If you need more details about our plans or have specific inquiries, please don't hesitate to reach out.</p>
+              <a href="#" class="btn-primary">Contact Our Support</a>
+          </div>
+      </section>
+
+      <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h4>Connect With Us</h4>
+            <ul>
+              <li><a href="#">Email Us</a></li>
+              <li><a href="#">Call Us</a></li>
+              <li><a href="#">Follow Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Explore Our Properties</h4>
+            <ul>
+              <li><a href="#">2-Bedroom Flats</a></li>
+              <li><a href="#">3-Bedroom Houses</a></li>
+              <li><a href="#">Luxury Apartments</a></li>
+              <li><a href="#">Commercial Spaces</a></li>
+              <li><a href="#">Investment Options</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>About Our Project</h4>
+            <ul>
+              <li><a href="#">Innovative Financing</a></li>
+              <li><a href="#">Community Driven</a></li>
+              <li><a href="#">Sustainable Living</a></li>
+              <li><a href="#">Quality Assurance</a></li>
+              <li><a href="#">Future Growth</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Stay Connected</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >YouTube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="company-info">
+            <!-- <img src="path/to/your/logo.png" alt="Building Dreams Realty Logo" class="footer-logo"> -->
+            <span
+              >FundMyUnit &copy; <span id="current_year"></span> FundMyUnit. All
+              rights reserved.</span
+            >
+          </div>
+          <div class="social-icons">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+    <script src="/script.js"></script>
+  </body>
 </html>
