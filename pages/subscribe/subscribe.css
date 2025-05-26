@@ -1,0 +1,343 @@
+:root {
+            --color-white: #FFFFFF;
+            --color-dark-gray: #333333; /* For primary text */
+            --color-soft-dark-gray: #212529; /* Alternative for primary text if softer is preferred */
+            --color-primary-green: #28A745; /* Call to Action */
+            --color-primary-green-hover: #218838; /* Slightly darker green */
+            --color-dark-slate-gray: #2C3E50; /* Footer background */
+            --color-light-gray-on-dark: #CCCCCC; /* Text on dark backgrounds */
+            --color-light-border: #DDDDDD; /* Borders and dividers */
+            --color-medium-gray: #6C757D; /* Secondary text, icons */
+
+            /* Gradient Colors (for the Features section background) */
+            --gradient-start-blue: #D1EEF0;
+            --gradient-middle-green: #E2EFE0;
+            --gradient-end-pink: #F0E0E7;
+        }
+
+        /* Basic Reset & Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--color-dark-gray);
+            background-color: var(--color-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Global Component Styles (from previous discussions) --- */
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--color-primary-green);
+            color: var(--color-white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: var(--color-primary-green-hover);
+        }
+
+        .btn-secondary { /* Example for a less prominent button */
+            background-color: transparent;
+            color: var(--color-dark-gray);
+            border: 1px solid var(--color-dark-gray);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background-color: var(--color-dark-gray);
+            color: var(--color-white);
+        }
+
+
+        /* --- Subscriptions Page Specific Styles --- */
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background-color: var(--color-white); /* Main background */
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            color: var(--color-dark-gray);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.1em;
+            color: var(--color-medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+        }
+
+        .plan-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-light-border);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary-green);
+        }
+
+        .plan-card.featured {
+            border: 2px solid var(--color-primary-green);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.15);
+        }
+
+        .plan-card .plan-name {
+            font-size: 1.8em;
+            color: var(--color-dark-gray);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .plan-card .price {
+            font-size: 2.5em;
+            color: var(--color-primary-green);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .plan-card .price span {
+            font-size: 0.5em;
+            color: var(--color-medium-gray);
+            font-weight: 400;
+        }
+
+        .plan-card .features-list {
+            list-style: none;
+            text-align: left;
+            margin: 20px 0 30px;
+            flex-grow: 1; /* Allow list to take available space */
+        }
+
+        .plan-card .features-list li {
+            color: var(--color-dark-gray);
+            margin-bottom: 10px;
+            padding-left: 25px; /* Space for icon */
+            position: relative;
+            font-size: 0.95em;
+        }
+
+        .plan-card .features-list li::before {
+            content: '✔'; /* Checkmark icon */
+            color: var(--color-primary-green);
+            position: absolute;
+            left: 0;
+            font-weight: 600;
+        }
+
+        .plan-card .btn-primary {
+            width: 100%; /* Make button full width of card */
+            margin-top: auto; /* Push button to bottom */
+        }
+
+        /* Comparison Table Section */
+        .comparison-section {
+            padding: 50px 20px;
+            background-color: var(--gradient-start-blue); /* Using one of the gradient colors */
+            text-align: center;
+        }
+
+        .comparison-section h2 {
+            font-size: 2em;
+            color: var(--color-dark-gray);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto; /* For horizontal scrolling on small screens */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: var(--color-white);
+            border-radius: 10px;
+            overflow: hidden; /* Ensures border-radius applies to table */
+            min-width: 600px; /* Ensure table doesn't get too narrow */
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid var(--color-light-border);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .comparison-table th {
+            background-color: var(--color-dark-slate-gray);
+            color: var(--color-white);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .comparison-table th:first-child {
+            text-align: left;
+            background-color: var(--color-dark-gray); /* Feature column header */
+            color: var(--color-white);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Zebra striping */
+        }
+
+        .comparison-table td {
+            color: var(--color-dark-gray);
+            font-size: 0.95em;
+        }
+
+        .comparison-table td.feature-name {
+            text-align: left;
+            font-weight: 500;
+            color: var(--color-dark-gray);
+        }
+
+        .check-icon {
+            color: var(--color-primary-green);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .cross-icon {
+            color: var(--color-medium-gray);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+
+        /* FAQ Section (reusing previous styling ideas) */
+        .faq-section {
+            padding: 50px 20px;
+            background-color: var(--color-white);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2em;
+            color: var(--color-dark-gray);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .faq-item {
+            border: 1px solid var(--color-light-border);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: var(--color-white);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            color: var(--color-dark-gray);
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f8f8;
+        }
+
+        .faq-question .arrow {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: var(--color-medium-gray);
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            font-size: 0.95em;
+        }
+
+        .faq-answer.open {
+            max-height: 200px; /* Adjust as needed for content length */
+            padding-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--color-dark-slate-gray); /* Dark background */
+            color: var(--color-white);
+        }
+
+        .contact-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+
+        .contact-section p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--color-light-gray-on-dark);
+        }
+
+        .contact-section .btn-primary {
+            background-color: var(--color-primary-green); /* Use primary green */
+            color: var(--color-white);
+        }
