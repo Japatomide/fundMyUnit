@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+            .comparison-section h2 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 15px; /* Reduce padding on smaller screens */
+                font-size: 0.9em; /* Slightly smaller font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comparison-section {
+                padding: 40px 0; /* Reduce section padding */
+            }
+
+            .comparison-section h2 {
+                font-size: 1.8em;
+                margin-bottom: 25px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 12px; /* Further reduce padding */
+                font-size: 0.85em; /* Further reduce font size */
+            }
+
+            .comparison-table .feature-name {
+                font-size: 0.9em;
+            }
+        }
