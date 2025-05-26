@@ -1,0 +1,31 @@
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 20px;
+        border-radius: 5px; /* Slightly less rounded on very small screens */
+    }
+  
+    .auth-form-section h2 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+  
+    .auth-tab-button {
+        padding: 12px 10px; /* Adjusted padding for 3 tabs on small screens */
+        font-size: 0.9em; /* Smaller font for tabs */
+    }
+  
+    .form-group label {
+        font-size: 0.9em;
+    }
+  
+    .form-group input {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+  
+    .auth-submit-button {
+        padding: 12px;
+        font-size: 1em;
+    }
+  }
