@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="auth.css">
-    <title>Auth Page</title>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="title-text">
-          <div class="title login">Login Form</div>
-          <div class="title signup">Signup Form</div>
-        </div>
-        <div class="form-container">
-          <div class="slide-controls">
-            <input type="radio" name="slide" id="login" checked>
-            <input type="radio" name="slide" id="signup">
-            <label for="login" class="slide login">Sign In</label>
-            <label for="signup" class="slide signup">Sign Up</label>
-            <div class="slider-tab"></div>
-          </div>
-          <div class="form-inner">
-            <form action="#" class="login">
-              <div class="field">
-                <input type="text" placeholder="Email Address" required>
-              </div>
-              <div class="field">
-                <input type="password" placeholder="Password" required>
-              </div>
-              <div class="pass-link"><a href="/pages/resetPassword/reset.html">Forgot password?</a></div>
-              <div class="field btn">
-                <div class="btn-layer"></div>
-                <input type="submit" value="Sign In">
-              </div>
-              <div class="signup-link">Not a member? <a href="">Create Account</a></div>
-            </form>
-            <form action="#" class="signup">
-              <div class="field">
-                <input type="text" placeholder="Email Address" required>
-              </div>
-              <div class="field">
-                <input type="password" placeholder="Password" required>
-              </div>
-              <div class="field">
-                <input type="password" placeholder="Confirm password" required>
-              </div>
-              <div class="field btn">
-                <div class="btn-layer"></div>
-                <input type="submit" value="Sign Up">
-              </div>
-              <div class="signup-link">Already have an account? <a href="">Login</a></div>
-            </form>
-          </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FundMyUnit - Sign In / Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="auth_rwd.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="message-box" id="messageBox"></div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab-button active" data-form="signIn">
+          Sign In
+        </button>
+        <button class="auth-tab-button" data-form="signUp">Sign Up</button>
       </div>
+
+      <div class="auth-form-section active" id="signInForm">
+        <h2>Sign In to Your Account</h2>
+        <form onsubmit="handleSignIn(event)">
+          <div class="form-group">
+            <label for="signInEmail">Email Address</label>
+            <input
+              type="email"
+              id="signInEmail"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signInPassword">Password</label>
+            <input
+              type="password"
+              id="signInPassword"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+          <button type="submit" class="auth-submit-button">Sign In</button>
+          <a href="/pages/resetPassword/reset.html" class="form-link">Forgot Password?</a>
+        </form>
+      </div>
+
+      <div class="auth-form-section" id="signUpForm">
+        <h2>Create Your Account</h2>
+        <form onsubmit="handleSignUp(event)">
+          <div class="form-group">
+            <label for="signUpEmail">Email Address</label>
+            <input
+              type="email"
+              id="signUpEmail"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signUpPassword">Password</label>
+            <input
+              type="password"
+              id="signUpPassword"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+          <button type="submit" class="auth-submit-button">Sign Up</button>
+        </form>
+      </div>
+
+      <p class="toggle-auth-link">
+        <span id="toggleText">Don't have an account?</span>
+        <a href="#" id="toggleLink">Sign Up</a>
+      </p>
+    </div>
     <script src="auth.js"></script>
-</body>
+  </body>
 </html>
