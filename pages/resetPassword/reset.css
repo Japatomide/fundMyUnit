@@ -1,101 +1,218 @@
-.form-container {
-    margin: 0 auto;
-    margin-top: 100px;
-    max-width: 400px;
-    background-color: #fff;
-    padding: 32px 24px;
-    font-size: 14px;
-    font-family: inherit;
-    color: #212121;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
-  }
-  
-  .form-container button:active {
-    scale: 0.95;
-  }
-  
-  .form-container .logo-container {
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  
-  .form-container .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-container .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  
-  .form-container .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-container .form-group input {
-    width: 90%;
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-family: inherit;
-    border: 1px solid #ccc;
-  }
-  
-  .form-container .form-group input::placeholder {
-    opacity: 0.5;
-  }
-  
-  .form-container .form-group input:focus {
-    outline: none;
-    border-color: #1778f2;
-  }
-  
-  .form-container .form-submit-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-    color: #fff;
-    background-color: #28a745;
-    border: none;
-    width: 100%;
-    padding: 12px 16px;
-    font-size: inherit;
-    gap: 8px;
-    margin: 12px 0;
-    cursor: pointer;
-    border-radius: 6px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
-  }
-  
-  .form-container .form-submit-btn:hover {
-    background-color: #313131;
-  }
-  
-  .form-container .link {
-    color: #1778f2;
-    text-decoration: none;
-  }
-  
-  .form-container .signup-link {
-    align-self: center;
-    font-weight: 500;
-  }
-  
-  .form-container .signup-link .link {
-    font-weight: 400;
-  }
-  
-  .form-container .link:hover {
-    text-decoration: underline;
-  }
-  
-  
+/* CSS Variables */
+:root {
+  --color-white: #FFFFFF;
+  --color-dark-gray: #333333; /* For primary text, headings */
+  --color-soft-dark-gray: #212529; /* Alternative for primary text if softer is preferred */
+  --color-text-light: #555555; /* A common softer text color */
+  --color-text-lighter: #666666; /* Even lighter text for paragraphs */
+  --color-text-darker: #222222; /* Very dark for some headings */
+
+  /* Accent Color (Primary Action - Green) */
+  --color-primary-green: #28A745; /* Call to Action */
+  --color-primary-green-hover: #1e7e34; /* Slightly darker green on hover */
+  --color-primary-green-shadow: rgba(40, 167, 69, 0.15); /* Subtle shadow for featured items */
+
+  /* Secondary/Contrast Colors (Footer & Dark Sections) */
+  --color-dark-slate-gray: #2C3E50; /* Footer background */
+  --color-light-gray-on-dark: #CCCCCC; /* Text on dark backgrounds */
+  --color-footer-link: #bdc3c7; /* Lighter grey for footer links */
+  --color-footer-link-hover: #3498db; /* Blue on footer link hover (kept from original) */
+  --color-footer-border: rgba(255, 255, 255, 0.1); /* Subtle white border for footer */
+
+  /* Neutral/Utility Colors (Borders, Dividers, Subtleties) */
+  --color-light-background: #f8f9fa; /* Light background for sections like FAQ */
+  --color-lighter-background: #f0f0f0; /* Even lighter background for hovers/alternating rows */
+  --color-light-border: #DDDDDD; /* Borders and dividers */
+  --color-medium-gray: #6C757D; /* Secondary text, icons, placeholder text */
+  --color-shadow-light: rgba(0, 0, 0, 0.05);
+  --color-shadow-medium: rgba(0, 0, 0, 0.1);
+  --color-shadow-heavy: rgba(0, 0, 0, 0.2);
+  --color-shadow-very-heavy: rgba(0, 0, 0, 0.19);
+}
+
+/* Basic Reset & Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--color-dark-gray);
+  background-color: var(--color-light-background); /* A slightly off-white background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+/* --- Auth Container Styles --- */
+.auth-container {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px var(--color-shadow-medium);
+  width: 100%;
+  max-width: 450px; /* Max width for the form card */
+  padding: 30px;
+  text-align: center;
+}
+
+/* --- Tab Navigation --- */
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.auth-tab-button {
+  background: none;
+  border: none;
+  padding: 15px 15px; /* Adjusted padding for 3 tabs */
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--color-medium-gray);
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+  outline: none; /* Remove outline on focus */
+  flex: 1; /* Distribute space evenly */
+}
+
+.auth-tab-button.active {
+  color: var(--color-primary-green);
+  border-bottom: 3px solid var(--color-primary-green);
+}
+
+/* --- Form Styles --- */
+.auth-form-section {
+  display: none; /* Hidden by default, shown by JS */
+  animation: fadeIn 0.5s ease-out;
+}
+
+.auth-form-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-form-section h2 {
+  font-size: 2em;
+  color: var(--color-dark-gray);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--color-light-border);
+  border-radius: 5px;
+  font-size: 1em;
+  color: var(--color-dark-gray);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus {
+  border-color: var(--color-primary-green);
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2); /* Light green glow */
+}
+
+/* --- Button Styles (reusing global primary green button) --- */
+.auth-submit-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px var(--color-primary-green-shadow);
+}
+
+.auth-submit-button:hover {
+  background-color: var(--color-primary-green-hover);
+  box-shadow: 0 6px 20px var(--color-primary-green-shadow);
+}
+
+.form-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: var(--color-medium-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-link:hover {
+  color: var(--color-primary-green);
+}
+
+.toggle-auth-link {
+  font-size: 0.9em;
+  margin-top: 25px;
+  color: var(--color-text-light);
+}
+
+.toggle-auth-link a {
+  color: var(--color-primary-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.toggle-auth-link a:hover {
+  color: var(--color-primary-green-hover);
+}
+
+/* --- Message Box for Alerts (replacing alert()) --- */
+.message-box {
+  display: none; /* Hidden by default */
+  background-color: #f0f8ff; /* Light blue */
+  color: #0056b3; /* Dark blue text */
+  border: 1px solid #a7d9f7;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+.message-box.error {
+  background-color: #fff0f0; /* Light red */
+  color: #cc0000; /* Dark red */
+  border-color: #f7a7a7;
+}
+
+.message-box.success {
+  background-color: #e6ffe6; /* Light green */
+  color: #008000; /* Dark green */
+  border-color: #a7f7a7;
+}
+
