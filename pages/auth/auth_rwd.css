@@ -1,5 +1,31 @@
-@media screen and (max-width: 400px){
-    .wrapper {
-      margin-inline: 1rem;
-    }
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .auth-container {
+      padding: 20px;
+      border-radius: 5px; /* Slightly less rounded on very small screens */
   }
+
+  .auth-form-section h2 {
+      font-size: 1.6em;
+      margin-bottom: 20px;
+  }
+
+  .auth-tab-button {
+      padding: 12px 15px;
+      font-size: 1em;
+  }
+
+  .form-group label {
+      font-size: 0.9em;
+  }
+
+  .form-group input {
+      padding: 10px 12px;
+      font-size: 0.95em;
+  }
+
+  .auth-submit-button {
+      padding: 12px;
+      font-size: 1em;
+  }
+}
