@@ -1,34 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Reset</title>
-    <link rel="stylesheet" href="reset.css" />
-  </head>
-  <body>
-    <div class="form-container">
-      <div class="logo-container">Forgot Password</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundMyUnit - Sign In / Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* CSS Variables (from previous discussions - ensure these are consistent with your main style.css) */
+        
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="message-box" id="messageBox"></div>
 
-      <form class="form">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required=""
-          />
+        <div class="auth-tabs">
+            <button class="auth-tab-button active" data-form="signIn">Sign In</button>
+            <button class="auth-tab-button" data-form="signUp">Sign Up</button>
+            <button class="auth-tab-button" data-form="forgotPassword">Forgot Password</button>
         </div>
 
-        <button class="form-submit-btn" type="submit">Send Email</button>
-      </form>
+        <div class="auth-form-section active" id="signInForm">
+            <h2>Sign In to Your Account</h2>
+            <form onsubmit="handleSignIn(event)">
+                <div class="form-group">
+                    <label for="signInEmail">Email Address</label>
+                    <input type="email" id="signInEmail" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="signInPassword">Password</label>
+                    <input type="password" id="signInPassword" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="auth-submit-button">Sign In</button>
+                <a href="#" class="form-link" data-target-form="forgotPassword">Forgot Password?</a>
+            </form>
+        </div>
 
-      <p class="signup-link">
-        Don't have an account?
-        <a href="#" class="signup-link link"> Sign up now</a>
-      </p>
+        <div class="auth-form-section" id="signUpForm">
+            <h2>Create Your Account</h2>
+            <form onsubmit="handleSignUp(event)">
+                <div class="form-group">
+                    <label for="signUpEmail">Email Address</label>
+                    <input type="email" id="signUpEmail" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="signUpPassword">Password</label>
+                    <input type="password" id="signUpPassword" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="auth-submit-button">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="auth-form-section" id="forgotPasswordForm">
+            <h2>Reset Your Password</h2>
+            <p class="toggle-auth-link" style="margin-bottom: 20px;">
+                Enter your email address below and we'll send you a link to reset your password.
+            </p>
+            <form onsubmit="handleForgotPassword(event)">
+                <div class="form-group">
+                    <label for="forgotPasswordEmail">Email Address</label>
+                    <input type="email" id="forgotPasswordEmail" placeholder="your.email@example.com" required>
+                </div>
+                <button type="submit" class="auth-submit-button">Send Reset Link</button>
+            </form>
+        </div>
+
+        <p class="toggle-auth-link">
+            <span id="toggleText">Don't have an account?</span>
+            <a href="#" id="toggleLink" data-target-form="signUp">Sign Up</a>
+        </p>
     </div>
-  </body>
+    <script src="reset.js"></script>
+</body>
 </html>
